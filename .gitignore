@@ -1,0 +1,13 @@
+# Private/draft audio stays out of Git.
+music/audio/
+.DS_Store
+Thumbs.db
+
+# Audio files are ignored everywhere EXCEPT music/songs/ (your own songs live there).
+*.mp3
+*.m4a
+*.wav
+*.ogg
+*.flac
+!music/songs/**/*.mp3
+!music/songs/**/*.m4a
