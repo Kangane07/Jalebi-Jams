@@ -1,6 +1,5 @@
 import { AudioPlayer } from "./audio-player.js";
 import { DJEngine } from "./dj-engine.js";
-import "./analytics-consent.js";
 
 const categories = {
   hindi: [
