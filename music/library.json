@@ -120,6 +120,78 @@
       "transitionDuration": 5
     },
     {
+      "id": "hindi_chatpatte_fevicol_se_mamta_sharma",
+      "title": "Fevicol Se",
+      "artist": "Mamta Sharma",
+      "language": "hindi",
+      "category": "chatpatte",
+      "audioPath": "music/songs/hindi/chatpatte/Fevicol%20Se%20-%20Mamta%20Sharma.mp3",
+      "artwork": "assets/artwork/placeholder.svg",
+      "hookStart": 93.0,
+      "playbackEnd": 153.0,
+      "transitionDuration": 5
+    },
+    {
+      "id": "hindi_chatpatte_halkat_jawani_salim",
+      "title": "Halkat Jawani",
+      "artist": "Salim",
+      "language": "hindi",
+      "category": "chatpatte",
+      "audioPath": "music/songs/hindi/chatpatte/Halkat%20Jawani%20-%20Salim.mp3",
+      "artwork": "assets/artwork/placeholder.svg",
+      "hookStart": 145.5,
+      "playbackEnd": 205.5,
+      "transitionDuration": 5
+    },
+    {
+      "id": "hindi_chatpatte_hamka_peeni_hai_wajid_sajid",
+      "title": "Hamka Peeni Hai",
+      "artist": "Wajid Sajid",
+      "language": "hindi",
+      "category": "chatpatte",
+      "audioPath": "music/songs/hindi/chatpatte/Hamka%20Peeni%20Hai%20-%20Wajid%20Sajid.mp3",
+      "artwork": "assets/artwork/placeholder.svg",
+      "hookStart": 166.5,
+      "playbackEnd": 226.5,
+      "transitionDuration": 5
+    },
+    {
+      "id": "hindi_chatpatte_jadoo_ki_jhappi_mika_singh",
+      "title": "Jadoo ki Jhappi",
+      "artist": "Mika Singh",
+      "language": "hindi",
+      "category": "chatpatte",
+      "audioPath": "music/songs/hindi/chatpatte/Jadoo%20ki%20Jhappi%20-%20Mika%20Singh.mp3",
+      "artwork": "assets/artwork/placeholder.svg",
+      "hookStart": 121.5,
+      "playbackEnd": 181.5,
+      "transitionDuration": 5
+    },
+    {
+      "id": "hindi_chatpatte_jalebi_bai_ritu_pathak",
+      "title": "Jalebi Bai",
+      "artist": "Ritu pathak",
+      "language": "hindi",
+      "category": "chatpatte",
+      "audioPath": "music/songs/hindi/chatpatte/Jalebi%20Bai%20-%20Ritu%20pathak.mp3",
+      "artwork": "assets/artwork/placeholder.svg",
+      "hookStart": 165.5,
+      "playbackEnd": 225.5,
+      "transitionDuration": 5
+    },
+    {
+      "id": "hindi_chatpatte_jhalla_wallah_shreya_ghoshal",
+      "title": "Jhalla Wallah",
+      "artist": "Shreya Ghoshal",
+      "language": "hindi",
+      "category": "chatpatte",
+      "audioPath": "music/songs/hindi/chatpatte/Jhalla%20Wallah%20-%20Shreya%20Ghoshal.mp3",
+      "artwork": "assets/artwork/placeholder.svg",
+      "hookStart": 104.5,
+      "playbackEnd": 164.5,
+      "transitionDuration": 5
+    },
+    {
       "id": "hindi_chatpatte_pyaar_hota_kayi_baar_hai_arijit_singh",
       "title": "Pyaar Hota Kayi Baar Hai",
       "artist": "Arijit Singh",
