@@ -252,6 +252,54 @@
       "transitionDuration": 5
     },
     {
+      "id": "hindi_chatpatte_mala_jau_de_urmila_dhangar",
+      "title": "Mala Jau De",
+      "artist": "Urmila Dhangar",
+      "language": "hindi",
+      "category": "chatpatte",
+      "audioPath": "music/songs/hindi/chatpatte/Mala%20Jau%20De%20-%20Urmila%20Dhangar.mp3",
+      "artwork": "assets/artwork/placeholder.svg",
+      "hookStart": 18.5,
+      "playbackEnd": 78.5,
+      "transitionDuration": 5
+    },
+    {
+      "id": "hindi_chatpatte_munni_badnaam_mamta_sharma",
+      "title": "Munni Badnaam",
+      "artist": "Mamta Sharma",
+      "language": "hindi",
+      "category": "chatpatte",
+      "audioPath": "music/songs/hindi/chatpatte/Munni%20Badnaam%20-%20Mamta%20Sharma.mp3",
+      "artwork": "assets/artwork/placeholder.svg",
+      "hookStart": 215.0,
+      "playbackEnd": 275.0,
+      "transitionDuration": 5
+    },
+    {
+      "id": "hindi_chatpatte_pinky_mamta_sharma",
+      "title": "Pinky",
+      "artist": "Mamta Sharma",
+      "language": "hindi",
+      "category": "chatpatte",
+      "audioPath": "music/songs/hindi/chatpatte/Pinky%20-%20Mamta%20Sharma.mp3",
+      "artwork": "assets/artwork/placeholder.svg",
+      "hookStart": 118.0,
+      "playbackEnd": 178.0,
+      "transitionDuration": 5
+    },
+    {
+      "id": "hindi_chatpatte_pungi_mika_singh",
+      "title": "Pungi",
+      "artist": "Mika Singh",
+      "language": "hindi",
+      "category": "chatpatte",
+      "audioPath": "music/songs/hindi/chatpatte/Pungi%20-%20Mika%20Singh.mp3",
+      "artwork": "assets/artwork/placeholder.svg",
+      "hookStart": 174.5,
+      "playbackEnd": 234.5,
+      "transitionDuration": 5
+    },
+    {
       "id": "hindi_chatpatte_pyaar_hota_kayi_baar_hai_arijit_singh",
       "title": "Pyaar Hota Kayi Baar Hai",
       "artist": "Arijit Singh",
@@ -261,6 +309,18 @@
       "artwork": "assets/artwork/placeholder.svg",
       "hookStart": 114.5,
       "playbackEnd": 174.5,
+      "transitionDuration": 5
+    },
+    {
+      "id": "hindi_chatpatte_sheila_ki_jawani_vishal_shekhar",
+      "title": "Sheila Ki Jawani",
+      "artist": "Vishal Shekhar",
+      "language": "hindi",
+      "category": "chatpatte",
+      "audioPath": "music/songs/hindi/chatpatte/Sheila%20Ki%20Jawani%20-%20Vishal%20Shekhar.mp3",
+      "artwork": "assets/artwork/placeholder.svg",
+      "hookStart": 52.5,
+      "playbackEnd": 112.5,
       "transitionDuration": 5
     }
   ]
