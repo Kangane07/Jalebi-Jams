@@ -12,6 +12,54 @@
   },
   "tracks": [
     {
+      "id": "hindi_chatpatte_aa_ante_amalapuram_malathy",
+      "title": "Aa Ante Amalapuram",
+      "artist": "Malathy",
+      "language": "hindi",
+      "category": "chatpatte",
+      "audioPath": "music/songs/hindi/chatpatte/Aa%20Ante%20Amalapuram%20-%20Malathy.mp3",
+      "artwork": "assets/artwork/placeholder.svg",
+      "hookStart": 112.5,
+      "playbackEnd": 172.5,
+      "transitionDuration": 5
+    },
+    {
+      "id": "hindi_chatpatte_aa_re_pritam_pyaare_sajid_wajid",
+      "title": "Aa Re Pritam Pyaare",
+      "artist": "Sajid Wajid",
+      "language": "hindi",
+      "category": "chatpatte",
+      "audioPath": "music/songs/hindi/chatpatte/Aa%20Re%20Pritam%20Pyaare%20-%20Sajid%20Wajid.mp3",
+      "artwork": "assets/artwork/placeholder.svg",
+      "hookStart": 97.5,
+      "playbackEnd": 157.5,
+      "transitionDuration": 5
+    },
+    {
+      "id": "hindi_chatpatte_aapka_kya_hoga_mika_singh",
+      "title": "Aapka Kya Hoga",
+      "artist": "Mika Singh",
+      "language": "hindi",
+      "category": "chatpatte",
+      "audioPath": "music/songs/hindi/chatpatte/Aapka%20Kya%20Hoga%20-%20Mika%20Singh.mp3",
+      "artwork": "assets/artwork/placeholder.svg",
+      "hookStart": 98.5,
+      "playbackEnd": 158.5,
+      "transitionDuration": 5
+    },
+    {
+      "id": "hindi_chatpatte_balam_pichkari_vishal_dhdlani",
+      "title": "Balam Pichkari",
+      "artist": "Vishal Dhdlani",
+      "language": "hindi",
+      "category": "chatpatte",
+      "audioPath": "music/songs/hindi/chatpatte/Balam%20Pichkari%20-%20Vishal%20Dhdlani.mp3",
+      "artwork": "assets/artwork/placeholder.svg",
+      "hookStart": 153.5,
+      "playbackEnd": 213.5,
+      "transitionDuration": 5
+    },
+    {
       "id": "hindi_chatpatte_pyaar_hota_kayi_baar_hai_arijit_singh",
       "title": "Pyaar Hota Kayi Baar Hai",
       "artist": "Arijit Singh",
