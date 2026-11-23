@@ -34,6 +34,7 @@ def energy_envelope(path):
 
 
 def find_hook(path, duration):
+    import numpy as np
     env = energy_envelope(path)
     fps = 1 / FRAME
     length = min(HOOK_LEN, max(20.0, duration - 8))
