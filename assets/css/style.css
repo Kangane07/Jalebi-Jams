@@ -254,9 +254,10 @@ legend { margin-bottom: 10px; color: #d2cbc5; font-size: 9px; }
 }
 .artwork-frame::before, .artwork-frame::after { position: absolute; inset: 7%; border: 1px solid #ffffff18; border-radius: 50%; content: ""; pointer-events: none; }
 .artwork-frame::after { inset: 16%; }
-.artwork-placeholder { position: relative; z-index: 1; width: 52%; aspect-ratio: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1px solid #ffffff35; border-radius: 50%; background: radial-gradient(circle, #ff7a00 0 32%, #242128 33% 100%); box-shadow: 0 0 55px #ff7a0033; }
-.artwork-placeholder span { display: block; width: 72%; color: #1b1410; font: 700 clamp(30px, 4.2vw, 46px)/1 var(--display); letter-spacing: -.06em; text-align: center; }
-.artwork-placeholder small { color: var(--cream); font-size: 7px; letter-spacing: 1px; }
+.artwork-frame.has-artwork::before, .artwork-frame.has-artwork::after { display: none; }
+.artwork-frame.has-artwork .artwork-placeholder { display: none; }
+.artwork-placeholder { position: relative; z-index: 1; width: 52%; aspect-ratio: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1px solid #ffffff35; border-radius: 50%; background: radial-gradient(circle, #ff7a00 0 36%, #242128 37% 100%); box-shadow: 0 0 55px #ff7a0033; }
+.artwork-placeholder span { display: block; width: 72%; color: #1b1410; font: 700 clamp(22px, 2.8vw, 32px)/1 var(--display); letter-spacing: -.06em; text-align: center; }
 .artwork-glow { position: absolute; z-index: 0; inset: 0; background: linear-gradient(145deg, #ffffff08, transparent 45%, #ff7a0010); pointer-events: none; }
 .track-area { min-width: 0; }
 .track-area .eyebrow { margin-bottom: 12px; font-size: 8px; }
