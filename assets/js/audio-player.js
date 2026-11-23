@@ -121,14 +121,15 @@ export class AudioPlayer extends EventTarget {
     deck.mixLevel = from;
 
     return new Promise((resolve) => {
-      const step = (now) => {
-        const progress = Math.min(1, (now - startedAt) / durationMs);
+      const timer = window.setInterval(() => {
+        const progress = Math.min(1, (performance.now() - startedAt) / durationMs);
         deck.mixLevel = from + ((to - from) * progress);
         deck.audio.volume = this.volume * deck.mixLevel;
-        if (progress < 1) window.requestAnimationFrame(step);
-        else resolve();
-      };
-      window.requestAnimationFrame(step);
+        if (progress >= 1) {
+          window.clearInterval(timer);
+          resolve();
+        }
+      }, 20);
     });
   }
 
