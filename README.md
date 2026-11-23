@@ -2,11 +2,11 @@
 
 Jalebi Jams is a static, mobile-friendly personal automated DJ. The site includes the landing page, Hindi and Marathi category selection, a two-deck audio player, and automatic DJ selection. The public music catalog starts empty; no recordings are included.
 
-## Google Analytics and privacy
+## Google Tag Manager and privacy
 
-Google Analytics is optional and will not load until a GA4 Measurement ID is configured and a visitor accepts analytics. To enable it, replace `G-XXXXXXXXXX` in `assets/js/analytics-consent.js` with the Measurement ID from your Google Analytics web data stream. The ID is public configuration, not a secret. Visitors can reject analytics or reopen Cookie settings from the homepage footer.
+The site loads the Google Tag Manager container `GTM-B837K9PK` on page visits. To collect Google Analytics data, configure a Google Analytics 4 tag for the site inside that container in Google Tag Manager. The container ID is public configuration, not a secret. The tag may use cookies or similar technologies based on the tags configured in the container.
 
-The site's [Privacy Policy](privacy.html) describes the analytics, GitHub Pages hosting, and Google Fonts. Update it if the site's data practices change. The repository's source code is licensed under the [MIT License](LICENSE); music and other third-party assets are not covered by that license unless explicitly stated.
+The site does not show an analytics consent or cookie settings control. See the [Privacy Policy](privacy.html) for information about Google Tag Manager, analytics, GitHub Pages, and Google Fonts. Update the policy if the services or tags change. The repository's source code is licensed under the [MIT License](LICENSE); music and other third-party assets are not covered unless explicitly stated.
 
 ## Add songs
 
