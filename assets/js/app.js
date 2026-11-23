@@ -101,6 +101,7 @@ function displayTrack(track) {
   document.querySelector("#progress-fill").style.width = "0%";
   const artwork = document.querySelector("#artwork-frame");
   artwork.style.backgroundImage = track.artwork ? `url("${track.artwork}")` : "";
+  artwork.classList.toggle("has-artwork", Boolean(track.artwork));
   playerPanel.classList.remove("is-empty");
   setPlaybackControl(true);
   setStatus("ON AIR", "The DJ has the decks.");
