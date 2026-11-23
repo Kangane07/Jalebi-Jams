@@ -252,15 +252,15 @@
       "transitionDuration": 1
     },
     {
-      "id": "hindi_chatpatte_mala_jau_de_urmila_dhangar",
+      "id": "hindi_chatpatte_mala_jau_de_urmila_pathak",
       "title": "Mala Jau De",
-      "artist": "Urmila Dhangar",
+      "artist": "Urmila Pathak",
       "language": "hindi",
       "category": "chatpatte",
-      "audioPath": "music/songs/hindi/chatpatte/Mala%20Jau%20De%20-%20Urmila%20Dhangar.mp3",
+      "audioPath": "music/songs/hindi/chatpatte/Mala%20Jau%20De%20-%20Urmila%20Pathak.mp3",
       "artwork": "assets/artwork/placeholder.svg",
-      "hookStart": 18.5,
-      "playbackEnd": 78.5,
+      "hookStart": 165.5,
+      "playbackEnd": 225.5,
       "transitionDuration": 1
     },
     {
