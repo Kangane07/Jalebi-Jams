@@ -1,11 +1,10 @@
 import { transitionSeconds } from "./transitions.js";
 
 export class DJEngine extends EventTarget {
-  constructor(player, { historyLimit = 3 } = {}) {
+  constructor(player) {
     super();
     this.player = player;
-    this.historyLimit = historyLimit;
-    this.history = [];
+    this.shuffleBag = [];
     this.tracks = [];
     this.currentTrack = null;
     this.nextTrack = null;
@@ -19,19 +18,32 @@ export class DJEngine extends EventTarget {
     return library.tracks.filter((track) => track.language === language && track.category === category && track.audioPath && Number.isFinite(Number(track.hookStart)) && Number(track.playbackEnd) > Number(track.hookStart));
   }
 
+  shuffleTracks() {
+    const shuffled = [...this.tracks];
+    for (let index = shuffled.length - 1; index > 0; index -= 1) {
+      const swapIndex = Math.floor(Math.random() * (index + 1));
+      [shuffled[index], shuffled[swapIndex]] = [shuffled[swapIndex], shuffled[index]];
+    }
+
+    // A fresh cycle should not begin with the track that just ended.
+    if (shuffled.length > 1 && shuffled[0].id === this.currentTrack?.id) {
+      const swapIndex = 1 + Math.floor(Math.random() * (shuffled.length - 1));
+      [shuffled[0], shuffled[swapIndex]] = [shuffled[swapIndex], shuffled[0]];
+    }
+    return shuffled;
+  }
+
   pickNext() {
     if (!this.tracks.length) return null;
-    const fresh = this.tracks.filter((track) => !this.history.includes(track.id));
-    const pool = fresh.length ? fresh : this.tracks.filter((track) => track.id !== this.currentTrack?.id);
-    const choices = pool.length ? pool : this.tracks;
-    const picked = choices[Math.floor(Math.random() * choices.length)];
-    this.history = [...this.history.filter((id) => id !== picked.id), picked.id].slice(-this.historyLimit);
-    return picked;
+    if (!this.shuffleBag.length) this.shuffleBag = this.shuffleTracks();
+    return this.shuffleBag.shift() ?? null;
   }
 
   async start(library, language, category) {
     this.tracks = this.eligibleTracks(library, language, category);
-    this.history = [];
+    this.shuffleBag = [];
+    this.currentTrack = null;
+    this.nextTrack = null;
     if (!this.tracks.length) {
       this.dispatchEvent(new CustomEvent("empty", { detail: { language, category } }));
       return false;
@@ -89,6 +101,6 @@ export class DJEngine extends EventTarget {
   async skip() { await this.advance(); }
   pause() { this.player.pause(); }
   async resume() { await this.player.resume(); }
-  stop() { this.player.stop(); this.currentTrack = null; this.nextTrack = null; this.tracks = []; }
+  stop() { this.player.stop(); this.currentTrack = null; this.nextTrack = null; this.tracks = []; this.shuffleBag = []; }
 }
 
