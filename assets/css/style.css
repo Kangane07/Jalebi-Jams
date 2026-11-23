@@ -375,26 +375,3 @@ footer { min-height: 76px; display: grid; grid-template-columns: auto 1fr auto; 
 }
 
 
-.privacy-consent { position: fixed; z-index: 20; left: 50%; bottom: 18px; transform: translateX(-50%); width: min(720px, calc(100% - 32px)); display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 18px 20px; border: 1px solid rgba(248,230,201,.18); border-radius: 14px; background: #252329; box-shadow: 0 16px 48px rgba(0,0,0,.38); color: var(--cream); }
-.privacy-consent[hidden] { display: none; }
-.privacy-consent-copy strong { font-size: 13px; }
-.privacy-consent-copy p { margin: 5px 0 0; color: #b7aeaa; font-size: 11px; line-height: 1.55; }
-.privacy-consent-copy a { color: var(--orange); }
-.privacy-consent-actions { display: flex; flex-shrink: 0; gap: 8px; }
-.privacy-consent-actions button, .privacy-settings { border: 1px solid rgba(248,230,201,.25); border-radius: 8px; padding: 9px 12px; background: transparent; color: var(--cream); font: inherit; font-size: 10px; cursor: pointer; }
-.privacy-consent-actions button:last-child { border-color: var(--orange); background: var(--orange); color: #17120e; font-weight: 700; }
-.privacy-consent-actions button:hover, .privacy-settings:hover { border-color: var(--orange); color: var(--orange); }
-.privacy-consent-actions button:last-child:hover { color: #17120e; }
-.privacy-settings { padding: 0; border: 0; color: #aaa4a0; font-size: 10px; }
-.privacy-page { width: min(800px, calc(100% - 40px)); min-height: 70vh; margin: 64px auto 80px; color: var(--cream); }
-.privacy-page h1 { margin-bottom: 12px; font-size: clamp(42px, 8vw, 72px); }
-.privacy-page h2 { margin: 34px 0 10px; color: var(--orange); font-size: 18px; }
-.privacy-page p, .privacy-page li { color: #b7aeaa; font-size: 14px; line-height: 1.75; }
-.privacy-page a { color: var(--orange); }
-.privacy-back { display: inline-block; margin-bottom: 34px; color: var(--cream) !important; text-decoration: none; }
-@media (max-width: 680px) {
-  .privacy-consent { bottom: 10px; align-items: stretch; flex-direction: column; gap: 12px; padding: 15px; }
-  .privacy-consent-actions { justify-content: flex-end; }
-  .privacy-consent-actions button { flex: 1; }
-  .privacy-page { margin-top: 38px; }
-}
