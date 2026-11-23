@@ -10,5 +10,18 @@
       "standard": "Standard"
     }
   },
-  "tracks": []
+  "tracks": [
+    {
+      "id": "hindi_chatpatte_pyaar_hota_kayi_baar_hai_arijit_singh",
+      "title": "Pyaar Hota Kayi Baar Hai",
+      "artist": "Arijit Singh",
+      "language": "hindi",
+      "category": "chatpatte",
+      "audioPath": "music/songs/hindi/chatpatte/Pyaar%20Hota%20Kayi%20Baar%20Hai%20-%20Arijit%20Singh.mp3",
+      "artwork": "assets/artwork/placeholder.svg",
+      "hookStart": 114.5,
+      "playbackEnd": 174.5,
+      "transitionDuration": 5
+    }
+  ]
 }
