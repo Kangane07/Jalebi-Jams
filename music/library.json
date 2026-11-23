@@ -60,6 +60,66 @@
       "transitionDuration": 5
     },
     {
+      "id": "hindi_chatpatte_balma_shreya_ghoshal",
+      "title": "Balma",
+      "artist": "Shreya Ghoshal",
+      "language": "hindi",
+      "category": "chatpatte",
+      "audioPath": "music/songs/hindi/chatpatte/Balma%20-%20Shreya%20Ghoshal.mp3",
+      "artwork": "assets/artwork/placeholder.svg",
+      "hookStart": 90.0,
+      "playbackEnd": 150.0,
+      "transitionDuration": 5
+    },
+    {
+      "id": "hindi_chatpatte_chammak_challo_vishal_shekhar",
+      "title": "Chammak Challo",
+      "artist": "Vishal shekhar",
+      "language": "hindi",
+      "category": "chatpatte",
+      "audioPath": "music/songs/hindi/chatpatte/Chammak%20Challo%20-%20Vishal%20shekhar.mp3",
+      "artwork": "assets/artwork/placeholder.svg",
+      "hookStart": 95.0,
+      "playbackEnd": 155.0,
+      "transitionDuration": 5
+    },
+    {
+      "id": "hindi_chatpatte_character_dheela_neeraj_shridhar",
+      "title": "Character Dheela",
+      "artist": "Neeraj Shridhar",
+      "language": "hindi",
+      "category": "chatpatte",
+      "audioPath": "music/songs/hindi/chatpatte/Character%20Dheela%20-%20Neeraj%20Shridhar.mp3",
+      "artwork": "assets/artwork/placeholder.svg",
+      "hookStart": 144.0,
+      "playbackEnd": 204.0,
+      "transitionDuration": 5
+    },
+    {
+      "id": "hindi_chatpatte_chikni_chameli_ajay_atul",
+      "title": "Chikni Chameli",
+      "artist": "Ajay&Atul",
+      "language": "hindi",
+      "category": "chatpatte",
+      "audioPath": "music/songs/hindi/chatpatte/Chikni%20Chameli%20-%20Ajay%26Atul.mp3",
+      "artwork": "assets/artwork/placeholder.svg",
+      "hookStart": 130.0,
+      "playbackEnd": 190.0,
+      "transitionDuration": 5
+    },
+    {
+      "id": "hindi_chatpatte_dhan_te_nan_shukhwinder_singh",
+      "title": "Dhan Te Nan",
+      "artist": "Shukhwinder Singh",
+      "language": "hindi",
+      "category": "chatpatte",
+      "audioPath": "music/songs/hindi/chatpatte/Dhan%20Te%20Nan%20-%20Shukhwinder%20Singh.mp3",
+      "artwork": "assets/artwork/placeholder.svg",
+      "hookStart": 104.0,
+      "playbackEnd": 164.0,
+      "transitionDuration": 5
+    },
+    {
       "id": "hindi_chatpatte_pyaar_hota_kayi_baar_hai_arijit_singh",
       "title": "Pyaar Hota Kayi Baar Hai",
       "artist": "Arijit Singh",
