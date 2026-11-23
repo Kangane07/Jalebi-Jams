@@ -67,8 +67,8 @@
       "category": "chatpatte",
       "audioPath": "music/songs/hindi/chatpatte/Balma%20-%20Shreya%20Ghoshal.mp3",
       "artwork": "assets/artwork/placeholder.svg",
-      "hookStart": 90,
-      "playbackEnd": 150,
+      "hookStart": 90.0,
+      "playbackEnd": 150.0,
       "transitionDuration": 1
     },
     {
@@ -79,8 +79,8 @@
       "category": "chatpatte",
       "audioPath": "music/songs/hindi/chatpatte/Chammak%20Challo%20-%20Vishal%20shekhar.mp3",
       "artwork": "assets/artwork/placeholder.svg",
-      "hookStart": 95,
-      "playbackEnd": 155,
+      "hookStart": 95.0,
+      "playbackEnd": 155.0,
       "transitionDuration": 1
     },
     {
@@ -91,8 +91,8 @@
       "category": "chatpatte",
       "audioPath": "music/songs/hindi/chatpatte/Character%20Dheela%20-%20Neeraj%20Shridhar.mp3",
       "artwork": "assets/artwork/placeholder.svg",
-      "hookStart": 144,
-      "playbackEnd": 204,
+      "hookStart": 144.0,
+      "playbackEnd": 204.0,
       "transitionDuration": 1
     },
     {
@@ -103,8 +103,8 @@
       "category": "chatpatte",
       "audioPath": "music/songs/hindi/chatpatte/Chikni%20Chameli%20-%20Ajay%26Atul.mp3",
       "artwork": "assets/artwork/placeholder.svg",
-      "hookStart": 130,
-      "playbackEnd": 190,
+      "hookStart": 130.0,
+      "playbackEnd": 190.0,
       "transitionDuration": 1
     },
     {
@@ -115,8 +115,8 @@
       "category": "chatpatte",
       "audioPath": "music/songs/hindi/chatpatte/Dhan%20Te%20Nan%20-%20Shukhwinder%20Singh.mp3",
       "artwork": "assets/artwork/placeholder.svg",
-      "hookStart": 104,
-      "playbackEnd": 164,
+      "hookStart": 104.0,
+      "playbackEnd": 164.0,
       "transitionDuration": 1
     },
     {
@@ -127,8 +127,8 @@
       "category": "chatpatte",
       "audioPath": "music/songs/hindi/chatpatte/Fevicol%20Se%20-%20Mamta%20Sharma.mp3",
       "artwork": "assets/artwork/placeholder.svg",
-      "hookStart": 93,
-      "playbackEnd": 153,
+      "hookStart": 93.0,
+      "playbackEnd": 153.0,
       "transitionDuration": 1
     },
     {
@@ -175,8 +175,8 @@
       "category": "chatpatte",
       "audioPath": "music/songs/hindi/chatpatte/Hookah%20Bar%20-%20Himesh%20legend.mp3",
       "artwork": "assets/artwork/placeholder.svg",
-      "hookStart": 106,
-      "playbackEnd": 166,
+      "hookStart": 106.0,
+      "playbackEnd": 166.0,
       "transitionDuration": 1
     },
     {
@@ -223,8 +223,8 @@
       "category": "chatpatte",
       "audioPath": "music/songs/hindi/chatpatte/Kajra%20re%20-%20Don%27t%20know.mp3",
       "artwork": "assets/artwork/placeholder.svg",
-      "hookStart": 73,
-      "playbackEnd": 133,
+      "hookStart": 73.0,
+      "playbackEnd": 133.0,
       "transitionDuration": 1
     },
     {
@@ -271,8 +271,8 @@
       "category": "chatpatte",
       "audioPath": "music/songs/hindi/chatpatte/Munni%20Badnaam%20-%20Mamta%20Sharma.mp3",
       "artwork": "assets/artwork/placeholder.svg",
-      "hookStart": 215,
-      "playbackEnd": 275,
+      "hookStart": 215.0,
+      "playbackEnd": 275.0,
       "transitionDuration": 1
     },
     {
@@ -283,8 +283,8 @@
       "category": "chatpatte",
       "audioPath": "music/songs/hindi/chatpatte/Pinky%20-%20Mamta%20Sharma.mp3",
       "artwork": "assets/artwork/placeholder.svg",
-      "hookStart": 118,
-      "playbackEnd": 178,
+      "hookStart": 118.0,
+      "playbackEnd": 178.0,
       "transitionDuration": 1
     },
     {
