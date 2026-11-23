@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
-import json, re, subprocess, sys
+import json, re, subprocess, sys, math
 from pathlib import Path
 from urllib.parse import quote
-import numpy as np
 
 ROOT = Path(__file__).resolve().parent.parent
 SONGS = ROOT / "music" / "songs"
@@ -22,6 +21,7 @@ def duration_of(path):
 
 
 def energy_envelope(path):
+    import numpy as np
     raw = subprocess.run(["ffmpeg", "-v", "error", "-i", str(path), "-ac", "1", "-ar", str(SR),
                           "-f", "f32le", "-"], capture_output=True).stdout
     audio = np.frombuffer(raw, dtype=np.float32)
@@ -72,6 +72,28 @@ def slug(text):
     return re.sub(r"[^a-z0-9]+", "_", text.lower()).strip("_") or "track"
 
 
+def apply_timing_overrides(entry, override, duration, detected):
+    if not isinstance(override, dict):
+        print(f"WARN {entry['id']}: override must be an object; using detected values")
+        return
+    original = {"hookStart": detected[0], "playbackEnd": detected[1]}
+    for field in ("hookStart", "playbackEnd"):
+        if field not in override:
+            continue
+        try:
+            value = float(override[field])
+        except (TypeError, ValueError):
+            print(f"WARN {entry['id']}: invalid {field}; using detected value")
+            continue
+        if not math.isfinite(value) or value < 0 or value >= duration:
+            print(f"WARN {entry['id']}: {field} must be between 0 and {duration:.1f}; using detected value")
+            continue
+        entry[field] = round(value, 1)
+    if entry["playbackEnd"] <= entry["hookStart"]:
+        print(f"WARN {entry['id']}: playbackEnd must follow hookStart; using detected timestamps")
+        entry.update(original)
+
+
 def main():
     library = json.loads(LIBRARY.read_text(encoding="utf-8"))
     categories = library.get("categories", {})
@@ -99,8 +121,9 @@ def main():
         entry = {"id": f"{language}_{category}_{slug(path.stem)}", "title": title, "artist": artist,
                  "language": language, "category": category,
                  "audioPath": "music/songs/" + quote(key),
+                 "artwork": "assets/artwork/placeholder.svg",
                  "hookStart": start, "playbackEnd": end, "transitionDuration": TRANSITION}
-        entry.update({k: v for k, v in overrides.get(key, {}).items() if not k.startswith("_")})
+        apply_timing_overrides(entry, overrides.get(key, {}), duration, (start, end))
         base, n = entry["id"], 2
         while entry["id"] in used:
             entry["id"], n = f"{base}_{n}", n + 1
@@ -114,3 +137,4 @@ def main():
 
 if __name__ == "__main__":
     sys.exit(main())
+

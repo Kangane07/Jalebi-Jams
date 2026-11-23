@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "description": "Add only audio you have the right to distribute. Audio files are not included.",
+  "categories": {
+    "hindi": {
+      "chatpatte": "Chatpatte Gaane",
+      "retro": "Retro"
+    },
+    "marathi": {
+      "standard": "Standard"
+    }
+  },
+  "tracks": []
+}
+

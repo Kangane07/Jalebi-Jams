@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#101014">
+  <title>Jalebi Jams — Hook picker</title>
+  <style>
+    :root{color-scheme:dark;--bg:#101014;--panel:#211f26;--cream:#f8e6c9;--muted:#aaa4a0;--orange:#ff7a00}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--cream);font:15px system-ui,sans-serif;padding:32px 18px}.wrap{max-width:760px;margin:auto}.brand{font-weight:800;letter-spacing:1px}.brand b{color:var(--orange)}h1{font-size:clamp(30px,6vw,46px);margin:38px 0 8px}p{color:var(--muted);line-height:1.6}.card{background:var(--panel);border:1px solid #f8e6c922;border-radius:16px;padding:22px;margin-top:22px}label{display:block;font-size:12px;font-weight:700;margin-bottom:8px}.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}input,select,button{font:inherit}input[type=file],select{width:100%;background:#151419;color:var(--cream);border:1px solid #f8e6c933;border-radius:8px;padding:12px}audio{width:100%;margin:18px 0}button{border:0;border-radius:8px;padding:11px 15px;background:#ffffff12;color:var(--cream);cursor:pointer;font-weight:700;margin:4px 5px 4px 0}button:hover{background:#ffffff20}.primary{background:var(--orange);color:#17100a}.marks{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0;color:var(--muted);font-variant-numeric:tabular-nums}.marks b{color:var(--cream)}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#151419;border:1px solid #ffffff16;border-radius:9px;padding:14px;color:#ffc278;font-size:12px;min-height:48px}.hint{font-size:12px}@media(max-width:560px){body{padding:22px 14px}.card{padding:16px}.row{grid-template-columns:1fr}}
+  </style>
+</head>
+<body><main class="wrap">
+  <div class="brand">JALEBI <b>JAMS</b> · TOOL</div><h1>Find the good bit.</h1><p>Choose a local audio file, mark the hook start and playback end, then copy the override into <code>music/overrides.json</code>. The audio stays on your device.</p>
+  <section class="card">
+    <label for="audio-file">Local audio file</label><input id="audio-file" type="file" accept="audio/*">
+    <audio id="audio" controls preload="metadata" hidden></audio>
+    <div class="row"><div><label for="language">Language</label><select id="language"><option value="hindi">Hindi</option><option value="marathi">Marathi</option></select></div><div><label for="category">Category</label><select id="category"></select></div></div>
+    <p class="hint" id="filename">No file selected yet.</p>
+    <button id="set-start">Set hook start to current time</button><button id="set-end">Set playback end to current time</button><button id="preview">Preview selected portion</button>
+    <div class="marks"><span>Hook: <b id="start-value">not set</b></span><span>End: <b id="end-value">not set</b></span><span>Length: <b id="duration-value">—</b></span></div>
+  </section>
+  <section class="card"><label>Override JSON</label><pre id="output">Select a file and mark start and end.</pre><button class="primary" id="copy">Copy JSON</button><p class="hint">Use a comma between entries in the existing overrides object. Keep the song file name and folder path exact.</p></section>
+</main>
+<script>
+const categories={hindi:[["chatpatte","Chatpatte Gaane"],["retro","Retro"]],marathi:[["standard","Standard"]]};
+const fileInput=document.querySelector("#audio-file"),audio=document.querySelector("#audio"),language=document.querySelector("#language"),category=document.querySelector("#category");
+let file=null,start=null,end=null,objectUrl="";
+function renderCategories(){category.replaceChildren(...categories[language.value].map(([value,label])=>{const option=document.createElement("option");option.value=value;option.textContent=label;return option;}));renderOutput();}
+function timestamp(value){return value===null?"not set":`${value.toFixed(1)}s`;}
+function renderOutput(){document.querySelector("#start-value").textContent=timestamp(start);document.querySelector("#end-value").textContent=timestamp(end);document.querySelector("#duration-value").textContent=start!==null&&end!==null&&end>start?`${(end-start).toFixed(1)}s`:"—";const valid=file&&start!==null&&end!==null&&end>start;document.querySelector("#output").textContent=valid?JSON.stringify({[`${language.value}/${category.value}/${file.name}`]:{hookStart:start,playbackEnd:end}},null,2):"Select a file and mark a valid start and end.";}
+fileInput.addEventListener("change",()=>{file=fileInput.files?.[0]||null;start=null;end=null;if(objectUrl)URL.revokeObjectURL(objectUrl);if(file){objectUrl=URL.createObjectURL(file);audio.src=objectUrl;audio.hidden=false;document.querySelector("#filename").textContent=`${file.name} · ${(file.size/1024/1024).toFixed(1)} MB`;}else{audio.removeAttribute("src");audio.hidden=true;document.querySelector("#filename").textContent="No file selected yet.";}renderOutput();});
+language.addEventListener("change",renderCategories);category.addEventListener("change",renderOutput);
+document.querySelector("#set-start").addEventListener("click",()=>{if(file&&Number.isFinite(audio.currentTime)){start=Number(audio.currentTime.toFixed(1));renderOutput();}});
+document.querySelector("#set-end").addEventListener("click",()=>{if(file&&Number.isFinite(audio.currentTime)){end=Number(audio.currentTime.toFixed(1));renderOutput();}});
+document.querySelector("#preview").addEventListener("click",async()=>{if(start===null||end===null||end<=start)return;audio.currentTime=start;try{await audio.play();}catch{}audio.ontimeupdate=()=>{if(audio.currentTime>=end){audio.pause();audio.ontimeupdate=null;}};});
+document.querySelector("#copy").addEventListener("click",async(event)=>{try{await navigator.clipboard.writeText(document.querySelector("#output").textContent);event.currentTarget.textContent="Copied";setTimeout(()=>event.currentTarget.textContent="Copy JSON",1200);}catch{event.currentTarget.textContent="Select the JSON above to copy";}});
+renderCategories();
+</script></body></html>
+
