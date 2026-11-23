@@ -2,6 +2,12 @@
 
 Jalebi Jams is a static, mobile-friendly personal automated DJ. The site includes the landing page, Hindi and Marathi category selection, a two-deck audio player, and automatic DJ selection. The public music catalog starts empty; no recordings are included.
 
+## Google Analytics and privacy
+
+Google Analytics is optional and will not load until a GA4 Measurement ID is configured and a visitor accepts analytics. To enable it, replace `G-XXXXXXXXXX` in `assets/js/analytics-consent.js` with the Measurement ID from your Google Analytics web data stream. The ID is public configuration, not a secret. Visitors can reject analytics or reopen Cookie settings from the homepage footer.
+
+The site's [Privacy Policy](privacy.html) describes the analytics, GitHub Pages hosting, and Google Fonts. Update it if the site's data practices change. The repository's source code is licensed under the [MIT License](LICENSE); music and other third-party assets are not covered by that license unless explicitly stated.
+
 ## Add songs
 
 Read [HOW-TO-ADD-SONGS.md](HOW-TO-ADD-SONGS.md). Only upload audio you have permission to distribute publicly. Put MP3 or M4A files in `music/songs/<language>/<category>/`; the GitHub Actions workflow generates metadata in `music/library.json`. Files should remain under GitHub's per-file size limit and the recommended 25 MB limit.
