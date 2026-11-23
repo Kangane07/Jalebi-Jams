@@ -4,7 +4,7 @@ Jalebi Jams is a static, mobile-friendly personal automated DJ. The site include
 
 ## Google Analytics and privacy
 
-The site loads GA4 directly on page visits with Measurement ID `G-2JTD1K8Z86`. The ID is public configuration, not a secret. The Google tag sends page views and may also collect the interactions enabled for the web stream, such as scrolls and outbound link clicks. The site does not show analytics consent or cookie settings controls.
+The site loads GA4 directly on page visits with Measurement ID `G-5HXEZGG8L0`, belonging to the Jalebi Jams property. The ID is public configuration, not a secret. The Google tag sends page views and may also collect the interactions enabled for the web stream, such as scrolls and outbound link clicks. The site does not show analytics consent or cookie settings controls.
 
 See the [Privacy Policy](privacy.html) for details about Google Analytics, GitHub Pages, and Google Fonts. The repository's source code is licensed under the [MIT License](LICENSE); music and other third-party assets are not covered unless explicitly stated.
 
@@ -50,5 +50,3 @@ The DJ starts at `hookStart`, stops at `playbackEnd`, and uses the outgoing trac
 ## Deploy
 
 The web app is plain HTML, CSS, and JavaScript with no build step. Configure GitHub Pages to publish the repository root on `main`. The Actions workflow only updates the generated song catalog; it does not deploy a separate site artifact.
-
-
