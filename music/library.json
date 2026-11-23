@@ -156,6 +156,30 @@
       "transitionDuration": 5
     },
     {
+      "id": "hindi_chatpatte_high_heels_jaz_dhami",
+      "title": "High Heels",
+      "artist": "Jaz dhami",
+      "language": "hindi",
+      "category": "chatpatte",
+      "audioPath": "music/songs/hindi/chatpatte/High%20Heels%20-%20Jaz%20dhami.mp3",
+      "artwork": "assets/artwork/placeholder.svg",
+      "hookStart": 181.5,
+      "playbackEnd": 241.5,
+      "transitionDuration": 5
+    },
+    {
+      "id": "hindi_chatpatte_hookah_bar_himesh_legend",
+      "title": "Hookah Bar",
+      "artist": "Himesh legend",
+      "language": "hindi",
+      "category": "chatpatte",
+      "audioPath": "music/songs/hindi/chatpatte/Hookah%20Bar%20-%20Himesh%20legend.mp3",
+      "artwork": "assets/artwork/placeholder.svg",
+      "hookStart": 106.0,
+      "playbackEnd": 166.0,
+      "transitionDuration": 5
+    },
+    {
       "id": "hindi_chatpatte_jadoo_ki_jhappi_mika_singh",
       "title": "Jadoo ki Jhappi",
       "artist": "Mika Singh",
@@ -189,6 +213,42 @@
       "artwork": "assets/artwork/placeholder.svg",
       "hookStart": 104.5,
       "playbackEnd": 164.5,
+      "transitionDuration": 5
+    },
+    {
+      "id": "hindi_chatpatte_kajra_re_don_t_know",
+      "title": "Kajra re",
+      "artist": "Don't know",
+      "language": "hindi",
+      "category": "chatpatte",
+      "audioPath": "music/songs/hindi/chatpatte/Kajra%20re%20-%20Don%27t%20know.mp3",
+      "artwork": "assets/artwork/placeholder.svg",
+      "hookStart": 73.0,
+      "playbackEnd": 133.0,
+      "transitionDuration": 5
+    },
+    {
+      "id": "hindi_chatpatte_kamariya_asta_gill",
+      "title": "Kamariya",
+      "artist": "Asta Gill",
+      "language": "hindi",
+      "category": "chatpatte",
+      "audioPath": "music/songs/hindi/chatpatte/Kamariya%20-%20Asta%20Gill.mp3",
+      "artwork": "assets/artwork/placeholder.svg",
+      "hookStart": 52.5,
+      "playbackEnd": 112.5,
+      "transitionDuration": 5
+    },
+    {
+      "id": "hindi_chatpatte_laila_main_laila_pawni_pandey",
+      "title": "Laila Main Laila",
+      "artist": "Pawni pandey",
+      "language": "hindi",
+      "category": "chatpatte",
+      "audioPath": "music/songs/hindi/chatpatte/Laila%20Main%20Laila%20-%20Pawni%20pandey.mp3",
+      "artwork": "assets/artwork/placeholder.svg",
+      "hookStart": 47.5,
+      "playbackEnd": 107.5,
       "transitionDuration": 5
     },
     {
