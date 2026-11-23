@@ -11,7 +11,7 @@ EXTS = {".mp3", ".m4a"}
 SR = 11025
 FRAME = 0.5
 HOOK_LEN = 60.0
-TRANSITION = 5
+TRANSITION = 1
 
 
 def duration_of(path):
