@@ -63,7 +63,7 @@ button { color: inherit; }
 }
 .wordmark span { margin-left: 4px; color: var(--orange); }
 .wordmark i { margin-left: 7px; color: var(--violet); font-size: 13px; font-style: normal; }
-.topbar-note, .eyebrow, legend, .visual-caption, footer, .player-kicker, .player-footer {
+.topbar-note, .eyebrow, legend, .visual-caption, .player-kicker, .player-footer {
   font-size: 9px;
   font-weight: 700;
   letter-spacing: 1.45px;
@@ -304,8 +304,10 @@ legend { margin-bottom: 10px; color: #d2cbc5; font-size: 9px; }
 .player-view.is-entering { animation: screen-in .5s cubic-bezier(.2,.7,.2,1) both; }
 .player-view.is-exiting { animation: screen-out .25s ease forwards; pointer-events: none; }
 .setup-view.is-entering { animation: screen-in .45s cubic-bezier(.2,.7,.2,1) both; }
-footer { min-height: 68px; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--line); color: #8f8987; font-size: 8px; }
-footer b { margin: 0 5px; color: var(--orange); }
+footer { min-height: 72px; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--line); color: #a9a19a; font-size: 10px; font-weight: 500; letter-spacing: .25px; }
+footer span:first-child { color: #77716f; font-size: 9px; font-weight: 700; letter-spacing: 1px; }
+footer span:last-child { font-size: 11px; font-weight: 600; }
+footer b { margin-left: 5px; color: var(--orange); }
 
 @keyframes spin { to { transform: rotate(360deg); } }
 @keyframes wave { to { transform: scaleY(.9); opacity: .68; } }
@@ -356,7 +358,9 @@ footer b { margin: 0 5px; color: var(--orange); }
   .volume-control { gap: 7px; }
   .volume-control input { width: 69px; }
   .player-footer { padding: 14px 2%; font-size: 6px; letter-spacing: 1px; }
-  footer { min-height: 75px; align-items: flex-start; justify-content: center; flex-direction: column; gap: 7px; font-size: 7px; }
+  footer { min-height: 79px; align-items: flex-start; justify-content: center; flex-direction: column; gap: 7px; font-size: 10px; }
+  footer span:first-child { font-size: 8px; }
+  footer span:last-child { font-size: 11px; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
