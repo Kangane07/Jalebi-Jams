@@ -408,6 +408,18 @@
       "transitionDuration": 1
     },
     {
+      "id": "hindi_chatpatte_pink_lips_khushboo_grewal",
+      "title": "Pink Lips",
+      "artist": "Khushboo Grewal",
+      "language": "hindi",
+      "category": "chatpatte",
+      "audioPath": "music/songs/hindi/chatpatte/Pink%20Lips%20-%20Khushboo%20Grewal.mp3",
+      "artwork": "assets/artwork/placeholder.svg",
+      "hookStart": 115.5,
+      "playbackEnd": 175.5,
+      "transitionDuration": 1
+    },
+    {
       "id": "hindi_chatpatte_pinky_mamta_sharma",
       "title": "Pinky",
       "artist": "Mamta Sharma",
@@ -444,6 +456,18 @@
       "transitionDuration": 1
     },
     {
+      "id": "hindi_chatpatte_shararat_shashwat_sachdev",
+      "title": "Shararat",
+      "artist": "Shashwat Sachdev",
+      "language": "hindi",
+      "category": "chatpatte",
+      "audioPath": "music/songs/hindi/chatpatte/Shararat%20-%20Shashwat%20Sachdev.mp3",
+      "artwork": "assets/artwork/placeholder.svg",
+      "hookStart": 42.5,
+      "playbackEnd": 102.5,
+      "transitionDuration": 1
+    },
+    {
       "id": "hindi_chatpatte_sheila_ki_jawani_vishal_shekhar",
       "title": "Sheila Ki Jawani",
       "artist": "Vishal Shekhar",
@@ -453,6 +477,42 @@
       "artwork": "assets/artwork/placeholder.svg",
       "hookStart": 52.5,
       "playbackEnd": 112.5,
+      "transitionDuration": 1
+    },
+    {
+      "id": "hindi_chatpatte_sweety_tera_drama_dev_negi",
+      "title": "Sweety Tera Drama",
+      "artist": "Dev negi",
+      "language": "hindi",
+      "category": "chatpatte",
+      "audioPath": "music/songs/hindi/chatpatte/Sweety%20Tera%20Drama%20-%20Dev%20negi.mp3",
+      "artwork": "assets/artwork/placeholder.svg",
+      "hookStart": 79.5,
+      "playbackEnd": 139.5,
+      "transitionDuration": 1
+    },
+    {
+      "id": "hindi_chatpatte_tattad_tattad_aditya_narayan",
+      "title": "Tattad Tattad",
+      "artist": "Aditya Narayan",
+      "language": "hindi",
+      "category": "chatpatte",
+      "audioPath": "music/songs/hindi/chatpatte/Tattad%20Tattad%20-%20Aditya%20Narayan.mp3",
+      "artwork": "assets/artwork/placeholder.svg",
+      "hookStart": 190.0,
+      "playbackEnd": 250.0,
+      "transitionDuration": 1
+    },
+    {
+      "id": "hindi_chatpatte_uyi_amma_amit_trivedi",
+      "title": "Uyi Amma",
+      "artist": "Amit Trivedi",
+      "language": "hindi",
+      "category": "chatpatte",
+      "audioPath": "music/songs/hindi/chatpatte/Uyi%20Amma%20-%20Amit%20Trivedi.mp3",
+      "artwork": "assets/artwork/placeholder.svg",
+      "hookStart": 32.0,
+      "playbackEnd": 92.0,
       "transitionDuration": 1
     },
     {
