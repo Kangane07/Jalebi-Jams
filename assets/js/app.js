@@ -66,6 +66,9 @@ function setPlaybackControl(isPlaying) {
   button.title = isPlaying ? "Pause" : "Resume";
   playerPanel.classList.toggle("is-playing", isPlaying);
   playerCard.classList.toggle("is-playing", isPlaying);
+  if (navigator.mediaSession) {
+    try { navigator.mediaSession.playbackState = isPlaying ? "playing" : "paused"; } catch { /* Media Session is optional. */ }
+  }
 }
 
 function showPlayerView() {
@@ -93,7 +96,53 @@ function showSetupView() {
   }, 250);
 }
 
+function updateMediaSessionMetadata(track) {
+  if (!navigator.mediaSession || typeof window.MediaMetadata !== "function") return;
+  try {
+    navigator.mediaSession.metadata = new window.MediaMetadata({
+      title: track.title,
+      artist: track.artist || "Unknown artist",
+      album: "Jalebi Jams"
+    });
+  } catch { /* Metadata support varies by mobile browser. */ }
+}
+
+function registerMediaSessionControls() {
+  const session = navigator.mediaSession;
+  if (!session?.setActionHandler) return;
+
+  const actions = {
+    play: async () => {
+      try {
+        await dj.resume();
+        setPlaybackControl(true);
+        setStatus("ON AIR", "The DJ has the decks.");
+      } catch {
+        setStatus("PLAYBACK BLOCKED", "Return to Jalebi Jams and tap play to resume.");
+      }
+    },
+    pause: () => {
+      dj.pause();
+      setPlaybackControl(false);
+      setStatus("PAUSED", "Your mix is holding.");
+    },
+    nexttrack: () => {
+      dj.skip().catch(() => setStatus("TRACK ISSUE", "Could not skip to the next track."));
+    },
+    stop: () => {
+      dj.pause();
+      setPlaybackControl(false);
+      setStatus("PAUSED", "Your mix is holding.");
+    }
+  };
+
+  Object.entries(actions).forEach(([action, handler]) => {
+    try { session.setActionHandler(action, handler); } catch { /* This browser may not support this action. */ }
+  });
+}
+
 function displayTrack(track) {
+  updateMediaSessionMetadata(track);
   document.querySelector("#track-title").textContent = track.title;
   document.querySelector("#track-artist").textContent = track.artist;
   document.querySelector("#elapsed-time").textContent = "0:00";
@@ -180,5 +229,6 @@ document.querySelector("#exit-button").addEventListener("click", () => {
   showSetupView();
 });
 
+registerMediaSessionControls();
 renderCategories("hindi");
 
