@@ -255,9 +255,10 @@ legend { margin-bottom: 10px; color: #d2cbc5; font-size: 9px; }
 .artwork-frame::before, .artwork-frame::after { position: absolute; inset: 7%; border: 1px solid #ffffff18; border-radius: 50%; content: ""; pointer-events: none; }
 .artwork-frame::after { inset: 16%; }
 .artwork-frame.has-artwork::before, .artwork-frame.has-artwork::after { display: none; }
-.artwork-frame.has-artwork .artwork-placeholder { display: none; }
-.artwork-placeholder { position: relative; z-index: 1; width: 52%; aspect-ratio: 1; display: grid; place-items: center; border: 1px solid #ff7a00; border-radius: 50%; background: #111014; box-shadow: 0 0 55px #ff7a0033; }
-.player-logo { display: block; width: 84%; height: 84%; overflow: visible; }
+.artwork-frame.has-artwork .player-vinyl { display: none; }
+.artwork-frame.player-artwork { background: radial-gradient(circle at 50% 45%, #3a281d, #201d22 65%); }
+.artwork-frame.player-artwork::before, .artwork-frame.player-artwork::after { display: none; }
+.player-vinyl { width: 88%; max-width: 380px; }
 .artwork-glow { position: absolute; z-index: 0; inset: 0; background: linear-gradient(145deg, #ffffff08, transparent 45%, #ff7a0010); pointer-events: none; }
 .track-area { min-width: 0; }
 .track-area .eyebrow { margin-bottom: 12px; font-size: 8px; }
@@ -296,7 +297,7 @@ legend { margin-bottom: 10px; color: #d2cbc5; font-size: 9px; }
 .volume-control input { width: 92px; accent-color: var(--orange); cursor: pointer; }
 .player-message { min-height: 15px; margin: 16px 0 0; color: var(--muted); font-size: 10px; }
 .player-panel.is-empty .player-live { color: var(--muted); }
-.player-panel.is-empty .artwork-placeholder { filter: grayscale(.35); }
+.player-panel.is-empty .player-vinyl { filter: grayscale(.35); }
 .player-footer { position: relative; display: flex; justify-content: space-between; padding: 16px 5%; border-top: 1px solid var(--line); color: #817b7a; font-size: 8px; }
 .player-footer span:first-child { display: flex; align-items: center; gap: 8px; }
 .player-footer i { width: 5px; height: 5px; border-radius: 50%; background: var(--violet); }
