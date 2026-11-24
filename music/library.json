@@ -72,6 +72,30 @@
       "transitionDuration": 1
     },
     {
+      "id": "hindi_chatpatte_bhootni_ke_pritam",
+      "title": "Bhootni ke",
+      "artist": "Pritam",
+      "language": "hindi",
+      "category": "chatpatte",
+      "audioPath": "music/songs/hindi/chatpatte/Bhootni%20ke%20-%20Pritam.mp3",
+      "artwork": "assets/artwork/placeholder.svg",
+      "hookStart": 94.5,
+      "playbackEnd": 154.5,
+      "transitionDuration": 1
+    },
+    {
+      "id": "hindi_chatpatte_bijuria_sonu_nigam",
+      "title": "Bijuria",
+      "artist": "Sonu Nigam",
+      "language": "hindi",
+      "category": "chatpatte",
+      "audioPath": "music/songs/hindi/chatpatte/Bijuria%20-%20Sonu%20Nigam.mp3",
+      "artwork": "assets/artwork/placeholder.svg",
+      "hookStart": 100.5,
+      "playbackEnd": 160.5,
+      "transitionDuration": 1
+    },
+    {
       "id": "hindi_chatpatte_chammak_challo_vishal_shekhar",
       "title": "Chammak Challo",
       "artist": "Vishal shekhar",
@@ -108,6 +132,18 @@
       "transitionDuration": 1
     },
     {
+      "id": "hindi_chatpatte_desi_beat_mika_singh",
+      "title": "Desi Beat",
+      "artist": "Mika SIngh",
+      "language": "hindi",
+      "category": "chatpatte",
+      "audioPath": "music/songs/hindi/chatpatte/Desi%20Beat%20-%20Mika%20SIngh.mp3",
+      "artwork": "assets/artwork/placeholder.svg",
+      "hookStart": 121.0,
+      "playbackEnd": 181.0,
+      "transitionDuration": 1
+    },
+    {
       "id": "hindi_chatpatte_dhan_te_nan_shukhwinder_singh",
       "title": "Dhan Te Nan",
       "artist": "Shukhwinder Singh",
@@ -117,6 +153,18 @@
       "artwork": "assets/artwork/placeholder.svg",
       "hookStart": 104.0,
       "playbackEnd": 164.0,
+      "transitionDuration": 1
+    },
+    {
+      "id": "hindi_chatpatte_dilruba_dilnasheen_ribo",
+      "title": "Dilruba Dilnasheen",
+      "artist": "Ribo",
+      "language": "hindi",
+      "category": "chatpatte",
+      "audioPath": "music/songs/hindi/chatpatte/Dilruba%20Dilnasheen%20-%20Ribo.mp3",
+      "artwork": "assets/artwork/placeholder.svg",
+      "hookStart": 82.0,
+      "playbackEnd": 142.0,
       "transitionDuration": 1
     },
     {
