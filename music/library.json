@@ -336,6 +336,18 @@
       "transitionDuration": 1
     },
     {
+      "id": "hindi_chatpatte_kukkad_vishal_shekhar",
+      "title": "Kukkad",
+      "artist": "Vishal shekhar",
+      "language": "hindi",
+      "category": "chatpatte",
+      "audioPath": "music/songs/hindi/chatpatte/Kukkad%20-%20Vishal%20shekhar.mp3",
+      "artwork": "assets/artwork/placeholder.svg",
+      "hookStart": 45.0,
+      "playbackEnd": 105.0,
+      "transitionDuration": 1
+    },
+    {
       "id": "hindi_chatpatte_laila_main_laila_pawni_pandey",
       "title": "Laila Main Laila",
       "artist": "Pawni pandey",
@@ -345,6 +357,18 @@
       "artwork": "assets/artwork/placeholder.svg",
       "hookStart": 47.5,
       "playbackEnd": 107.5,
+      "transitionDuration": 1
+    },
+    {
+      "id": "hindi_chatpatte_lungi_dance_yo_yo_singh",
+      "title": "Lungi Dance",
+      "artist": "Yo Yo Singh",
+      "language": "hindi",
+      "category": "chatpatte",
+      "audioPath": "music/songs/hindi/chatpatte/Lungi%20Dance%20-%20Yo%20Yo%20Singh.mp3",
+      "artwork": "assets/artwork/placeholder.svg",
+      "hookStart": 140.5,
+      "playbackEnd": 200.5,
       "transitionDuration": 1
     },
     {
@@ -369,6 +393,18 @@
       "artwork": "assets/artwork/placeholder.svg",
       "hookStart": 215.0,
       "playbackEnd": 275.0,
+      "transitionDuration": 1
+    },
+    {
+      "id": "hindi_chatpatte_nachde_ne_saare_jasleen_royal",
+      "title": "Nachde Ne Saare",
+      "artist": "Jasleen Royal",
+      "language": "hindi",
+      "category": "chatpatte",
+      "audioPath": "music/songs/hindi/chatpatte/Nachde%20Ne%20Saare%20-%20Jasleen%20Royal.mp3",
+      "artwork": "assets/artwork/placeholder.svg",
+      "hookStart": 70.5,
+      "playbackEnd": 130.5,
       "transitionDuration": 1
     },
     {
@@ -417,6 +453,18 @@
       "artwork": "assets/artwork/placeholder.svg",
       "hookStart": 52.5,
       "playbackEnd": 112.5,
+      "transitionDuration": 1
+    },
+    {
+      "id": "hindi_chatpatte_kamariya_jackky_bhagnani",
+      "title": "kamariya",
+      "artist": "jackky bhagnani",
+      "language": "hindi",
+      "category": "chatpatte",
+      "audioPath": "music/songs/hindi/chatpatte/kamariya%20-%20jackky%20bhagnani.mp3",
+      "artwork": "assets/artwork/placeholder.svg",
+      "hookStart": 47.0,
+      "playbackEnd": 107.0,
       "transitionDuration": 1
     }
   ]
