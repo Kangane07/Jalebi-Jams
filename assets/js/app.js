@@ -100,8 +100,10 @@ function displayTrack(track) {
   document.querySelector("#duration-time").textContent = formatTime(Number(track.playbackEnd) - Number(track.hookStart));
   document.querySelector("#progress-fill").style.width = "0%";
   const artwork = document.querySelector("#artwork-frame");
-  artwork.style.backgroundImage = track.artwork ? `url("${track.artwork}")` : "";
-  artwork.classList.toggle("has-artwork", Boolean(track.artwork));
+  const artworkPath = track.artwork?.trim() || "";
+  const hasRealArtwork = Boolean(artworkPath && !/(^|\/)placeholder\.svg(?:[?#]|$)/i.test(artworkPath));
+  artwork.style.backgroundImage = hasRealArtwork ? `url("${artworkPath}")` : "";
+  artwork.classList.toggle("has-artwork", hasRealArtwork);
   playerPanel.classList.remove("is-empty");
   setPlaybackControl(true);
   setStatus("ON AIR", "The DJ has the decks.");
