@@ -1,3 +1,9 @@
+function isMobileAudioEnvironment() {
+  const userAgent = navigator.userAgent || "";
+  const isTouchIPad = navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1;
+  return /Android|iPhone|iPad|iPod|Mobile/i.test(userAgent) || isTouchIPad;
+}
+
 function waitUntilPlayable(audio, timeoutMs = 12000) {
   if (audio.readyState >= 2) return Promise.resolve();
   if (audio.error) return Promise.reject(new Error("Audio file could not be loaded."));
@@ -27,6 +33,8 @@ export class AudioPlayer extends EventTarget {
     super();
     this.context = null;
     this.masterGain = null;
+    this.useNativeMobileAudio = isMobileAudioEnvironment();
+    this.setPlaybackAudioSession();
     this.decks = [this.createDeck(), this.createDeck()];
     this.activeIndex = 0;
     this.volume = 0.8;
@@ -36,6 +44,8 @@ export class AudioPlayer extends EventTarget {
   createDeck() {
     const audio = new Audio();
     audio.preload = "auto";
+    audio.playsInline = true;
+    audio.setAttribute("playsinline", "");
     audio.crossOrigin = "anonymous";
     audio.addEventListener("timeupdate", () => this.dispatchEvent(new CustomEvent("timeupdate", { detail: { audio, deck: this.decks?.findIndex((item) => item.audio === audio) } })));
     audio.addEventListener("ended", () => this.dispatchEvent(new CustomEvent("ended", { detail: { deck: this.decks.findIndex((item) => item.audio === audio) } })));
@@ -43,7 +53,17 @@ export class AudioPlayer extends EventTarget {
     return { audio, source: null, gain: null, loadedUrl: "", mixLevel: 1 };
   }
 
+  setPlaybackAudioSession() {
+    if (!navigator.audioSession) return;
+    try { navigator.audioSession.type = "playback"; } catch { /* Audio Session API is optional. */ }
+  }
+
   async unlock() {
+    this.setPlaybackAudioSession();
+    // Keep phone playback on native media elements. iOS may suspend Web Audio
+    // when Safari is backgrounded or the screen locks.
+    if (this.useNativeMobileAudio) return;
+
     const Context = window.AudioContext || window.webkitAudioContext;
     if (Context && !this.context) {
       try {
@@ -139,7 +159,16 @@ export class AudioPlayer extends EventTarget {
     const current = this.decks[this.activeIndex];
     await this.seekToHook(next, track);
 
-    if (next.gain && current.gain && this.context && seconds > 0) {
+    if (this.useNativeMobileAudio) {
+      // Native media playback is the reliable path on phones. Switch decks
+      // directly instead of depending on Web Audio or background JS fades.
+      next.mixLevel = 1;
+      next.audio.volume = this.volume;
+      await next.audio.play();
+      current.audio.pause();
+      current.mixLevel = 1;
+      current.audio.volume = this.volume;
+    } else if (next.gain && current.gain && this.context && seconds > 0) {
       const duration = Math.min(Math.max(0, seconds), 12);
       const now = this.context.currentTime;
       next.gain.gain.cancelScheduledValues(now);
