@@ -168,6 +168,18 @@
       "transitionDuration": 1
     },
     {
+      "id": "hindi_chatpatte_dreamum_wakeuppam_sowmya_raoh",
+      "title": "Dreamum Wakeuppam",
+      "artist": "Sowmya Raoh",
+      "language": "hindi",
+      "category": "chatpatte",
+      "audioPath": "music/songs/hindi/chatpatte/Dreamum%20Wakeuppam%20-%20Sowmya%20Raoh.mp3",
+      "artwork": "assets/artwork/placeholder.svg",
+      "hookStart": 108.5,
+      "playbackEnd": 168.5,
+      "transitionDuration": 1
+    },
+    {
       "id": "hindi_chatpatte_fevicol_se_mamta_sharma",
       "title": "Fevicol Se",
       "artist": "Mamta Sharma",
@@ -177,6 +189,18 @@
       "artwork": "assets/artwork/placeholder.svg",
       "hookStart": 93.0,
       "playbackEnd": 153.0,
+      "transitionDuration": 1
+    },
+    {
+      "id": "hindi_chatpatte_gallan_goodiyaan_yashita_sharma",
+      "title": "Gallan Goodiyaan",
+      "artist": "Yashita Sharma",
+      "language": "hindi",
+      "category": "chatpatte",
+      "audioPath": "music/songs/hindi/chatpatte/Gallan%20Goodiyaan%20-%20Yashita%20Sharma.mp3",
+      "artwork": "assets/artwork/placeholder.svg",
+      "hookStart": 166.5,
+      "playbackEnd": 226.5,
       "transitionDuration": 1
     },
     {
@@ -264,6 +288,18 @@
       "transitionDuration": 1
     },
     {
+      "id": "hindi_chatpatte_kaddu_katega_pritum",
+      "title": "Kaddu Katega",
+      "artist": "Pritum",
+      "language": "hindi",
+      "category": "chatpatte",
+      "audioPath": "music/songs/hindi/chatpatte/Kaddu%20Katega%20-%20Pritum.mp3",
+      "artwork": "assets/artwork/placeholder.svg",
+      "hookStart": 133.5,
+      "playbackEnd": 193.5,
+      "transitionDuration": 1
+    },
+    {
       "id": "hindi_chatpatte_kajra_re_don_t_know",
       "title": "Kajra re",
       "artist": "Don't know",
@@ -273,6 +309,18 @@
       "artwork": "assets/artwork/placeholder.svg",
       "hookStart": 73.0,
       "playbackEnd": 133.0,
+      "transitionDuration": 1
+    },
+    {
+      "id": "hindi_chatpatte_kala_chashma_siddhartha_manohtra",
+      "title": "Kala Chashma",
+      "artist": "Siddhartha Manohtra",
+      "language": "hindi",
+      "category": "chatpatte",
+      "audioPath": "music/songs/hindi/chatpatte/Kala%20Chashma%20-%20Siddhartha%20Manohtra.mp3",
+      "artwork": "assets/artwork/placeholder.svg",
+      "hookStart": 94.0,
+      "playbackEnd": 154.0,
       "transitionDuration": 1
     },
     {
